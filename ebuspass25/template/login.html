@@ -1,0 +1,51 @@
+{% extends "index.html" %}
+{% block content %}
+<section id="contact" class="contact section" style="background-color: #000000;">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2 style="color: beige; background-color: black;">Login</h2>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+         <div class="col-lg-4">
+        </div>
+
+        <div class="col-lg-8">
+          <form  method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            {%csrf_token%}
+            <div class="row gy-4">
+            <div>
+              <div class="col-md-6">
+                <input type="text" name="user" class="form-control" placeholder="User Name or email" required="">
+            </div>
+
+            </div>
+            <div>
+              <div class="col-md-6">
+                <input type="password" class="form-control" name="pass" placeholder="password" required="">
+              </div>
+            </div>
+              
+              <div class="col-md-6 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                <button type="submit" class="reg-button">Login</button>
+              </div>
+
+            </div>
+          </form>
+        </div><!-- End Contact Form -->
+
+      </div>
+
+    </div>
+
+  </section><!-- /Contact Section -->
+
+{%endblock%}
